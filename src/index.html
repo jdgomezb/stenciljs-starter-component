@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component </title>
+    <link rel="stylesheet" href="/build/starter-component.css">
+    <script type="module" src="/build/starter-component.esm.js"></script>
+    <script nomodule src="/build/starter-component.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row hr">
+        <h3>Buttons</h3>
+        <div class="row space-between">
+          <h4>Default</h4>
+          <mc-button text="Mayo Clinic Button Default"></mc-button>
+        </div>
+        <div class="row space-between">
+          <h4>Primary</h4>
+          <mc-button text="Button Primary" appearance="primary"></mc-button>
+        </div>
+        <div class="row space-between">
+          <h4>Secondary</h4>
+          <mc-button text="Button Secondary" appearance="secondary"></mc-button>
+        </div>
+        <div class="row space-between">
+          <h4>Tertiary</h4>
+          <mc-button text="Button Tertiary" appearance="tertiary"></mc-button>
+        </div>
+        <div class="row space-between">
+          <h4>Warning</h4>
+          <mc-button text="Button Warning" appearance="warning"></mc-button>
+        </div>
+        <div class="row space-between">
+          <h4>Danger</h4>
+          <mc-button text="Button Danger" appearance="danger"></mc-button>
+        </div>
+      </div>
+      <div class="row hr">
+        <h3>Modal</h3>
+        <div class="row center">
+          <mc-button id="mc-modal-btn" text="Mayo Clinic Modal Default" appearance="primary"></mc-button>
+          <mc-modal
+            id="mc-modal"
+            header="Mayo Clinic Modal Default"
+            appearance="primary"
+            buttons='[
+            {"text": "Confirm"},
+            {"text": "Cancel"}
+            ]'>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis iusto libero id cum sequi fugit omnis, odit soluta. Repellat labore quos dicta officiis sint illum blanditiis libero consequatur laboriosam error?
+            Deleniti aut ratione repellat accusamus quaerat nesciunt eum fuga voluptatem? Maxime veniam similique quos, vel aut voluptas soluta at dolorum iste assumenda autem unde! Fugit accusamus vero nostrum quas totam.</p>
+          </mc-modal>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector('#mc-modal-btn');
+    const modal = document.querySelector('#mc-modal');
+
+    btn.addEventListener('click', () => {
+      openModal();
+    });
+
+    modal.addEventListener('action', () => {
+      closeModal();
+    });
+
+    const openModal = () => {
+      modal.isopen = true;
+    }
+
+    const closeModal = () => {
+      modal.isopen = false;
+    }
+  </script>
+</html>

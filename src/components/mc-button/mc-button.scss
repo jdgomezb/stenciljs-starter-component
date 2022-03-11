@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.btn {
+  background-color: var(--mono-05);
+  border: none;
+  border-radius: 4px;
+  color: var(--mono-70);
+  cursor: pointer;
+  font-weight: 500;
+  font-family: inherit;
+  height: 38px;
+  padding: 0 12px;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.1s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--mono-10);
+}
+
+.btn.primary {
+  background-color: var(--primary-50);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background-color: var(--primary-70);
+}
+
+.btn.secondary {
+  background-color: var(--mono-50);
+  color: var(--white);
+}
+
+.btn.secondary:hover {
+  background-color: var(--mono-70);
+}
+
+.btn.tertiary {
+  background-color: var(--primary-05);
+  color: var(--primary-50);
+}
+
+.btn.tertiary:hover {
+  background-color: var(--primary-10);
+  color: var(--primary-70);
+}
+
+.btn.warning {
+  background-color: var(--warning-50);
+  color: var(--void);
+}
+
+.btn.warning:hover {
+  background-color: var(--warning-70);
+}
+
+.btn.danger {
+  background-color: var(--danger-50);
+  color: var(--white);
+}
+
+.btn.danger:hover {
+  background-color: var(--danger-70);
+}
+
